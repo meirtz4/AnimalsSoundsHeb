@@ -1,4 +1,4 @@
-package com.meirtz4.animalssounds;
+package com.fatboydevelopers.animalssounds;
 
 import org.junit.Test;
 
