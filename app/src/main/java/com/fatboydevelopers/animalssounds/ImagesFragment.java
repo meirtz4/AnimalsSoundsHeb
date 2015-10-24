@@ -8,22 +8,32 @@ import android.view.ViewGroup;
 import android.widget.ImageButton;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Iterator;
 import java.util.List;
+import java.util.Random;
 
 /**
  * Created by Meir on 10/20/2015.
  */
 public class ImagesFragment extends android.support.v4.app.Fragment{
 
-    private static Activity mActivity;
-    private List<Animal> animals;
-    private static final String[] animalsStrings = {"dog"};
+    private static final String[] animalsStrings = {
+            "bird", "cat", "dog",  "owl", "lion", "peacock"};
 
+    // NO SOUND: "eagle", "monkey",
+    // NO IMAGE: "sheep", roster, parrot, horse,
+
+    private ArrayList<String> animalsList;
+    private static Activity mActivity;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        animals = new ArrayList<>();
+        animalsList = new ArrayList<>();
+        for (String str : animalsStrings){
+            animalsList.add(str);
+        }
     }
 
     public static ImagesFragment newInstance(Activity activity) {
@@ -35,15 +45,21 @@ public class ImagesFragment extends android.support.v4.app.Fragment{
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.images_layout, container, false);
+
+        long seed = System.nanoTime();
+        Collections.shuffle(animalsList, new Random(seed));
+        Iterator animalsIterator = animalsList.iterator();
+
         for (ImageButton button : InitImageButtons(view)){
-            animals.add(new Animal(GetRandomAnimal(), mActivity, button));
+            new Animal(GetRandomAnimal(animalsIterator), mActivity, button);
         }
         return view;
     }
 
-    private String GetRandomAnimal(){
-        // TODO
-        return "dog";
+    private String GetRandomAnimal(Iterator iter){
+        if (!iter.hasNext())
+            iter = animalsList.iterator();
+        return (String) iter.next();
     }
 
     private List<ImageButton> InitImageButtons(View view){
