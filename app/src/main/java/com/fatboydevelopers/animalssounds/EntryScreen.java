@@ -46,7 +46,7 @@ public class EntryScreen extends AppCompatActivity {
         protected android.support.v4.app.Fragment getFragmentForItem(final String str) {
             if (str.equals("Menu"))
                 return MenuFragment.newInstance(0, "Menu Page");
-            return ImagesFragment.newInstance(0, "Images Page");
+            return ImagesFragment.newInstance(EntryScreen.this);
         }
     }
 }
