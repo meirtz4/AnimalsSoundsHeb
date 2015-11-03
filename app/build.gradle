@@ -11,6 +11,16 @@ android {
         versionCode 1
         versionName "1.0"
     }
+
+    productFlavors {
+        free {
+            applicationId = "com.fatboydevelopers.animalssounds.free"
+        }
+        premium {
+            applicationId = "com.fatboydevelopers.animalssounds.premium"
+        }
+    }
+
     buildTypes {
         release {
             minifyEnabled false

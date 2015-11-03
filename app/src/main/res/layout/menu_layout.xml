@@ -10,14 +10,16 @@
         android:layout_height="match_parent"
         android:layout_weight="1">
 
-        <ImageButton
+        <Button
             android:layout_width="match_parent"
             android:layout_height="fill_parent"
-            android:id="@+id/menu_button_top_left"
+            android:id="@+id/menu_button_settings"
             android:background="#56ebeb"
+            android:text="@string/menu_settings"
+            android:textColor="#000"
             android:layout_weight="1"/>
 
-        <ImageButton
+        <Button
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:id="@+id/menu_button_bottom_left"
@@ -31,18 +33,19 @@
         android:layout_height="match_parent"
         android:layout_weight="1">
 
-        <ImageButton
+        <Button
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:id="@+id/menu_button_top_middle"
-            android:background="#dddddd"
+            android:background="#dd99dd"
             android:layout_weight="1"/>
 
-        <ImageButton
+        <Button
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/menu_button_bottom_middle"
-            android:background="#565656"
+            android:id="@+id/menu_button_about"
+            android:text="@string/menu_about"
+            android:background="#677eee"
             android:layout_weight="1"/>
     </LinearLayout>
 
@@ -52,14 +55,15 @@
         android:layout_height="match_parent"
         android:layout_weight="1">
 
-        <ImageButton
+        <Button
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/menu_button_top_right"
+            android:id="@+id/menu_button_premium"
+            android:text="@string/menu_premium"
             android:background="#aa5656"
             android:layout_weight="1.0"/>
 
-        <ImageButton
+        <Button
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:id="@+id/menu_button_bottom_right"
