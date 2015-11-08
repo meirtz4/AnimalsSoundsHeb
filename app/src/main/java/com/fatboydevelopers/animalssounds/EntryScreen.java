@@ -1,15 +1,10 @@
 package com.fatboydevelopers.animalssounds;
 
-import android.app.AlertDialog;
-import android.app.Dialog;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.view.View;
 import android.view.WindowManager;
-import android.widget.Button;
 
 import com.tobishiba.circularviewpager.library.BaseCircularViewPagerAdapter;
 import com.tobishiba.circularviewpager.library.CircularViewPagerHandler;

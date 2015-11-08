@@ -48,8 +48,8 @@ public class MenuFragment extends android.support.v4.app.Fragment{
             public void onClick(View v) {
                 new AlertDialog.Builder(mActivity)
                         .setTitle(R.string.title_about_us)
-                        .setMessage("MSG-1")
-                        .setIcon(android.R.drawable.ic_dialog_alert)
+                        .setMessage(R.string.message_about_us)
+                        .setIcon(R.drawable.ic_launcher)
                         .show();
             }
         });

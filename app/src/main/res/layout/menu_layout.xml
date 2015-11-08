@@ -16,6 +16,8 @@
             android:id="@+id/menu_button_settings"
             android:background="#56ebeb"
             android:text="@string/menu_settings"
+            android:textStyle="bold"
+            android:textSize="32dp"
             android:textColor="#000"
             android:layout_weight="1"/>
 
@@ -45,6 +47,8 @@
             android:layout_height="match_parent"
             android:id="@+id/menu_button_about"
             android:text="@string/menu_about"
+            android:textStyle="bold"
+            android:textSize="32dp"
             android:background="#677eee"
             android:layout_weight="1"/>
     </LinearLayout>
@@ -60,6 +64,9 @@
             android:layout_height="match_parent"
             android:id="@+id/menu_button_premium"
             android:text="@string/menu_premium"
+            android:textStyle="bold"
+            android:textSize="32dp"
+
             android:background="#aa5656"
             android:layout_weight="1.0"/>
 
