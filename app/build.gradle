@@ -11,13 +11,25 @@ android {
         versionCode 100
         versionName "1.0"
     }
+    signingConfigs {
+        release {
+            storeFile file("animalssounds.keystore")
+            storePassword "fatboy"
+            keyPassword "fatboy"
+            keyAlias "fatboy"
+        }
+    }
 
     productFlavors {
+        def signingVariable = signingConfigs.release
+
         free {
             applicationId = "com.fatboydevelopers.animalssounds.free"
+            signingConfig signingVariable
         }
         premium {
             applicationId = "com.fatboydevelopers.animalssounds.premium"
+            signingConfig signingVariable
         }
     }
 
@@ -30,7 +42,7 @@ android {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile fileTree(include: ['*.jar'], dir: 'libs')
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:23.+'
     compile 'com.github.tobiasbuchholz:circularviewpager:1.0.0'

@@ -19,10 +19,9 @@ import java.util.Random;
 public class ImagesFragment extends android.support.v4.app.Fragment{
 
     private static final String[] animalsStrings = {
-            "bird", "cat", "dog",  "owl", "lion", "peacock", "monkey"};
+            "bird", "cat", "dog",  "owl", "lion", "peacock", "monkey", "sheep", "rooster", "parrot", "horse"};
 
     // NO SOUND: "eagle",
-    // NO IMAGE: "sheep", roster, parrot, horse,
 
     private ArrayList<String> animalsList;
     private static Activity mActivity;
