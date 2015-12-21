@@ -42,7 +42,7 @@ public class MenuFragment extends android.support.v4.app.Fragment{
     public void SetOnClickListeners(View view) {
         Button aboutButton = (Button) view.findViewById(R.id.menu_button_about);
         Button settingsButton = (Button) view.findViewById(R.id.menu_button_settings);
-        Button premiumButton = (Button) view.findViewById(R.id.menu_button_premium);
+        Button storeButton = (Button) view.findViewById(R.id.menu_button_store);
 
         aboutButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -51,6 +51,12 @@ public class MenuFragment extends android.support.v4.app.Fragment{
                         .setMessage(R.string.message_about_us)
                         .setIcon(R.drawable.ic_launcher)
                         .show();
+            }
+        });
+
+        storeButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                new StoreButton().Action();
             }
         });
     }

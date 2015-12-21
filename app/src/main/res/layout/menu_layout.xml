@@ -62,7 +62,7 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/menu_button_premium"
+            android:id="@+id/menu_button_store"
             android:text="@string/menu_premium"
             android:textStyle="bold"
             android:textSize="32dp"
