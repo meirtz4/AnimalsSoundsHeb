@@ -56,7 +56,7 @@ public class MenuFragment extends android.support.v4.app.Fragment{
 
         storeButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                new StoreButton().Action();
+                new StoreButton().Action(v);
             }
         });
     }
