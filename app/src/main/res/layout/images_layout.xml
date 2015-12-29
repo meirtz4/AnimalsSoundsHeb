@@ -10,16 +10,26 @@
         android:layout_height="match_parent"
         android:layout_weight="1">
 
-        <ImageButton
+        <Button
+            style="@style/shadoweffect"
             android:layout_width="match_parent"
             android:layout_height="fill_parent"
             android:id="@+id/animal_button_top_left"
+            android:gravity="top"
+            android:textAlignment="center"
+            android:textSize="30dp"
+            android:textAllCaps="false"
             android:layout_weight="1"/>
 
-        <ImageButton
+        <Button
+            style="@style/shadoweffect"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:id="@+id/animal_button_bottom_left"
+            android:gravity="top"
+            android:textAlignment="center"
+            android:textSize="30dp"
+            android:textAllCaps="false"
             android:layout_weight="1"/>
     </LinearLayout>
 
@@ -29,16 +39,26 @@
         android:layout_height="match_parent"
         android:layout_weight="1">
 
-        <ImageButton
+        <Button
+            style="@style/shadoweffect"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:id="@+id/animal_button_top_middle"
+            android:gravity="top"
+            android:textAlignment="center"
+            android:textSize="30dp"
+            android:textAllCaps="false"
             android:layout_weight="1"/>
 
-        <ImageButton
+        <Button
+            style="@style/shadoweffect"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:id="@+id/animal_button_bottom_middle"
+            android:gravity="top"
+            android:textAlignment="center"
+            android:textSize="30dp"
+            android:textAllCaps="false"
             android:layout_weight="1"/>
     </LinearLayout>
 
@@ -48,16 +68,26 @@
         android:layout_height="match_parent"
         android:layout_weight="1">
 
-        <ImageButton
+        <Button
+            style="@style/shadoweffect"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:id="@+id/animal_button_top_right"
+            android:gravity="top"
+            android:textAlignment="center"
+            android:textSize="30dp"
+            android:textAllCaps="false"
             android:layout_weight="1"/>
 
-        <ImageButton
+        <Button
+            style="@style/shadoweffect"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:id="@+id/animal_button_bottom_right"
+            android:gravity="top"
+            android:textAlignment="center"
+            android:textSize="30dp"
+            android:textAllCaps="false"
             android:layout_weight="1"/>
     </LinearLayout>
 </LinearLayout>

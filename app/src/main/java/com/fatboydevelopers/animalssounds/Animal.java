@@ -1,8 +1,10 @@
 package com.fatboydevelopers.animalssounds;
 
 import android.app.Activity;
+import android.graphics.drawable.Drawable;
 import android.media.MediaPlayer;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 
 /**
@@ -12,14 +14,19 @@ public class Animal {
 
     private String mAnimalName;
 
-    public Animal(String animalName, Activity activity, ImageButton button){
+    public Animal(String animalName, Activity activity, Button button){
         animalName = animalName.toLowerCase();
         mAnimalName = animalName;
 
 
         String uri = "drawable/"+ animalName;
-        int imageResource = activity.getResources().getIdentifier(uri, null, activity.getPackageName());
-        button.setImageResource(imageResource);
+        Drawable imageResource = activity.getResources().getDrawable(
+                activity.getResources().getIdentifier(uri, null, activity.getPackageName()), null);
+        button.setBackground(imageResource);
+
+        String text = activity.getResources().getString(
+                activity.getResources().getIdentifier(animalName, "string", activity.getPackageName()));
+        button.setText(text);
 
         uri = "raw/"+ animalName;
         int soundResource = activity.getResources().getIdentifier(uri, null, activity.getPackageName());
@@ -30,7 +37,6 @@ public class Animal {
             public void onClick(View arg0) {
                 mp.start();
             }
-
         });
     }
 

@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageButton;
 
 import java.util.ArrayList;
@@ -49,7 +50,7 @@ public class ImagesFragment extends android.support.v4.app.Fragment{
         Collections.shuffle(animalsList, new Random(seed));
         Iterator animalsIterator = animalsList.iterator();
 
-        for (ImageButton button : InitImageButtons(view)){
+        for (Button button : InitImageButtons(view)){
             new Animal(GetRandomAnimal(animalsIterator), mActivity, button);
         }
         return view;
@@ -61,14 +62,14 @@ public class ImagesFragment extends android.support.v4.app.Fragment{
         return (String) iter.next();
     }
 
-    private List<ImageButton> InitImageButtons(View view){
-        List<ImageButton> buttons = new ArrayList<>();
-        buttons.add((ImageButton) view.findViewById(R.id.animal_button_top_left));
-        buttons.add((ImageButton) view.findViewById(R.id.animal_button_top_middle));
-        buttons.add((ImageButton) view.findViewById(R.id.animal_button_top_right));
-        buttons.add((ImageButton) view.findViewById(R.id.animal_button_bottom_left));
-        buttons.add((ImageButton) view.findViewById(R.id.animal_button_bottom_middle));
-        buttons.add((ImageButton) view.findViewById(R.id.animal_button_bottom_right));
+    private List<Button> InitImageButtons(View view){
+        List<Button> buttons = new ArrayList<>();
+        buttons.add((Button) view.findViewById(R.id.animal_button_top_left));
+        buttons.add((Button) view.findViewById(R.id.animal_button_top_middle));
+        buttons.add((Button) view.findViewById(R.id.animal_button_top_right));
+        buttons.add((Button) view.findViewById(R.id.animal_button_bottom_left));
+        buttons.add((Button) view.findViewById(R.id.animal_button_bottom_middle));
+        buttons.add((Button) view.findViewById(R.id.animal_button_bottom_right));
         return buttons;
     }
 }

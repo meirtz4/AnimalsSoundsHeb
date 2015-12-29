@@ -5,4 +5,16 @@
     <string name="menu_settings">Settings</string>
     <string name="menu_premium">Get Premium</string>
     <string name="message_about_us">Animal Sounds is an open source Android application for all ages. For any suggestions, questions or any issue please contact us via our Google Play Store page.\nEnjoy! And rank us if you liked it!\nFatboy Developers.</string>
+	<string name="bird">Bird</string>
+	<string name="cat">Cat</string>
+	<string name="dog">Dog</string>
+	<string name="eagle">Eagle</string>
+	<string name="horse">Horse</string>
+	<string name="lion">Lion</string>
+	<string name="monkey">Monkey</string>
+	<string name="owl">Owl</string>
+	<string name="parrot">Parrot</string>
+	<string name="peacock">Peacock</string>
+	<string name="rooster">Rooster</string>
+	<string name="sheep">Sheep</string>
 </resources>
