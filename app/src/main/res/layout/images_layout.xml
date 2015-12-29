@@ -14,14 +14,12 @@
             android:layout_width="match_parent"
             android:layout_height="fill_parent"
             android:id="@+id/animal_button_top_left"
-            android:background="@drawable/cat"
             android:layout_weight="1"/>
 
         <ImageButton
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:id="@+id/animal_button_bottom_left"
-            android:background="@drawable/lion"
             android:layout_weight="1"/>
     </LinearLayout>
 
@@ -35,14 +33,12 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:id="@+id/animal_button_top_middle"
-            android:background="@drawable/dog"
             android:layout_weight="1"/>
 
         <ImageButton
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:id="@+id/animal_button_bottom_middle"
-            android:background="@drawable/cat"
             android:layout_weight="1"/>
     </LinearLayout>
 
@@ -56,14 +52,12 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:id="@+id/animal_button_top_right"
-            android:background="@drawable/dog"
             android:layout_weight="1"/>
 
         <ImageButton
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:id="@+id/animal_button_bottom_right"
-            android:background="@drawable/lion"
             android:layout_weight="1"/>
     </LinearLayout>
 </LinearLayout>
