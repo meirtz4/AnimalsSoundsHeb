@@ -1,6 +1,7 @@
 package com.fatboydevelopers.animalssounds;
 
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
@@ -22,7 +23,6 @@ public class EntryScreen extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         SetViewPager();
-
     }
 
     public void SetViewPager(){
@@ -39,17 +39,20 @@ public class EntryScreen extends AppCompatActivity {
 
     public class MemeCircularViewPagerAdapter extends BaseCircularViewPagerAdapter<String> {
         private final Context mContext;
+        private final SharedPreferences mPreferences;
 
         public MemeCircularViewPagerAdapter(final Context context, final android.support.v4.app.FragmentManager fragmentManager, final List<String> strings) {
             super(fragmentManager, strings);
             mContext = context;
+            mPreferences = mContext.getSharedPreferences("com.fatboydevelopers.animalssounds", Context.MODE_PRIVATE);
         }
 
         @Override
         protected android.support.v4.app.Fragment getFragmentForItem(final String str) {
             if (str.equals("Menu"))
-                return MenuFragment.newInstance(EntryScreen.this);
-            return ImagesFragment.newInstance(EntryScreen.this);
+                return MenuFragment.newInstance(EntryScreen.this, mPreferences);
+
+            return ImagesFragment.newInstance(EntryScreen.this, mPreferences);
         }
     }
 }

@@ -2,6 +2,7 @@ package com.fatboydevelopers.animalssounds;
 
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -16,10 +17,12 @@ import java.util.ArrayList;
 public class MenuFragment extends android.support.v4.app.Fragment{
 
     private static Activity mActivity;
+    private static SharedPreferences mPreferences;
 
     // newInstance constructor for creating fragment with arguments
-    public static MenuFragment newInstance(Activity activity) {
+    public static MenuFragment newInstance(Activity activity, SharedPreferences preferences) {
         mActivity = activity;
+        mPreferences = preferences;
         MenuFragment fragmentFirst = new MenuFragment();
         return fragmentFirst;
     }
@@ -57,6 +60,13 @@ public class MenuFragment extends android.support.v4.app.Fragment{
         storeButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 new StoreButton().Action(v);
+            }
+        });
+
+        settingsButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                SettingsDialog settingsDialog = new SettingsDialog(getActivity(), mPreferences);
+                settingsDialog.show();
             }
         });
     }

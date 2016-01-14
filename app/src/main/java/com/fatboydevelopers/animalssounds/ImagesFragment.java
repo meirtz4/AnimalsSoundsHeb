@@ -1,12 +1,12 @@
 package com.fatboydevelopers.animalssounds;
 
 import android.app.Activity;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.ImageButton;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -14,18 +14,19 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Random;
 
-/**
- * Created by Meir on 10/20/2015.
- */
 public class ImagesFragment extends android.support.v4.app.Fragment{
 
     private static final String[] animalsStrings = {
             "bird", "cat", "dog",  "owl", "lion", "peacock", "monkey", "sheep", "rooster", "parrot", "horse"};
 
+
+
     // NO SOUND: "eagle",
 
+    private static SharedPreferences mPreferences;
     private ArrayList<String> animalsList;
     private static Activity mActivity;
+
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -36,8 +37,9 @@ public class ImagesFragment extends android.support.v4.app.Fragment{
         }
     }
 
-    public static ImagesFragment newInstance(Activity activity) {
+    public static ImagesFragment newInstance(Activity activity, SharedPreferences preferences) {
         mActivity = activity;
+        mPreferences = preferences;
         ImagesFragment fragmentFirst = new ImagesFragment();
         return fragmentFirst;
     }
@@ -50,8 +52,10 @@ public class ImagesFragment extends android.support.v4.app.Fragment{
         Collections.shuffle(animalsList, new Random(seed));
         Iterator animalsIterator = animalsList.iterator();
 
+        Boolean enableAnimalsNames = mPreferences.getBoolean("ENABLE_ANIMALS_NAMES", false);
+
         for (Button button : InitImageButtons(view)){
-            new Animal(GetRandomAnimal(animalsIterator), mActivity, button);
+            new Animal(GetRandomAnimal(animalsIterator), mActivity, button, enableAnimalsNames);
         }
         return view;
     }

@@ -14,7 +14,7 @@ public class Animal {
 
     private String mAnimalName;
 
-    public Animal(String animalName, Activity activity, Button button){
+    public Animal(String animalName, Activity activity, Button button, Boolean enableAnimalsNames){
         animalName = animalName.toLowerCase();
         mAnimalName = animalName;
 
@@ -24,9 +24,13 @@ public class Animal {
                 activity.getResources().getIdentifier(uri, null, activity.getPackageName()), null);
         button.setBackground(imageResource);
 
-        String text = activity.getResources().getString(
-                activity.getResources().getIdentifier(animalName, "string", activity.getPackageName()));
-        button.setText(text);
+        if (enableAnimalsNames) {
+            String text = activity.getResources().getString(
+                    activity.getResources().getIdentifier(animalName, "string", activity.getPackageName()));
+            button.setText(text);
+        } else {
+            button.setText("");
+        }
 
         uri = "raw/"+ animalName;
         int soundResource = activity.getResources().getIdentifier(uri, null, activity.getPackageName());
