@@ -15,6 +15,9 @@ import java.util.List;
 
 public class EntryScreen extends AppCompatActivity {
 
+
+    private long BackButtonFirstClick = 0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,6 +26,15 @@ public class EntryScreen extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         SetViewPager();
+    }
+
+    @Override
+    public void onBackPressed() {
+        if (System.currentTimeMillis() - BackButtonFirstClick < 1000){
+            finish();
+            System.exit(0);
+        }
+        BackButtonFirstClick = System.currentTimeMillis();
     }
 
     public void SetViewPager(){
