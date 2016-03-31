@@ -42,7 +42,9 @@ public class EntryScreen extends AppCompatActivity {
         List<String> strings = new ArrayList<>();
         strings.add("Images");
         strings.add("Images");
+        strings.add("Images");
         strings.add("Menu");
+        strings.add("Images");
         strings.add("Images");
         strings.add("Images");
         vpPager.setAdapter(new MemeCircularViewPagerAdapter(this, getSupportFragmentManager(), strings));
