@@ -17,10 +17,10 @@ import java.util.Random;
 public class ImagesFragment extends android.support.v4.app.Fragment{
 
     private static final String[] animalsStrings = {
-            "bird", "cat", "dog",  "owl", "lion", "peacock", "monkey", "parrot", "horse", "duck", "rooster", "goat", "sheep"};
+            "bird", "cat", "dog",  "owl", "lion", "peacock", "monkey", "parrot", "horse", "duck", "rooster", "goat", "sheep", "cow", "elephant"};
 
 
-	// NO IMAGE: cow, elephant
+	// NO IMAGE:
     // NO SOUND: eagle,
 
     private static SharedPreferences mPreferences;

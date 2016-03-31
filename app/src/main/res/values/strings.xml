@@ -8,9 +8,11 @@
 	<string name="enable_text">Enable animals names</string>
 	<string name="bird">Bird</string>
 	<string name="cat">Cat</string>
+	<string name="cow">Cow</string>
 	<string name="dog">Dog</string>
 	<string name="duck">Duck</string>
 	<string name="eagle">Eagle</string>
+	<string name="elephant">Elephant</string>
 	<string name="goat">Goat</string>
 	<string name="horse">Horse</string>
 	<string name="lion">Lion</string>
